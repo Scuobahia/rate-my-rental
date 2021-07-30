@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Landlord model
-class Landlord extends Model { 
+class Landlord extends Model {
   // set up method to run on instance data (per Landlord) to check password
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);

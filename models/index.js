@@ -5,7 +5,7 @@ const Rating = require('./Rating');
 const Comment = require('./Comment');
 const Tenant = require('./Tenant');
 const Properties = require('./Properties');
-const Reply = require('./Require');
+const Reply = require('./Reply');
 
 // create associations
 Landlord.hasMany(Properties, {
