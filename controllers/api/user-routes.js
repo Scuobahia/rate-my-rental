@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Tenant, Comment, Post } = require('../../models');
-
+const { Tenant, Comment, Post, Rating } = require('../../models');
 
 router.get('/', (req, res) => {
     Tenant.findAll({
@@ -15,6 +14,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Tenant.findOne({
+        where: {
+            id: req.params.id
+        },
         attributes: { exclude: ['password'] },
         include: []
     })
