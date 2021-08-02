@@ -1,4 +1,3 @@
-// import all models
 const Post = require('./Post');
 const Landlord = require('./Landlord');
 const Rating = require('./Rating');
