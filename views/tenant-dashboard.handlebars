@@ -4,7 +4,7 @@
    <ol>
       {{#each posts as |post|}}
       <li>
-         {{> post-info post}}
+         {{> comment}}
          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
       </li>
       {{/each}}
