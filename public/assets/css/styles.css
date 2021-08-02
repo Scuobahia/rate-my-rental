@@ -9,7 +9,7 @@ main {
     font-family:'Londrina Shadow', cursive;
 }
 .landing {
-    min-height: 70vh;
+    min-height: 100vh;
     background-image: url(https://source.unsplash.com/2d4lAQAlbDA/2000x1300); 
     background-size: cover;
    
@@ -97,6 +97,8 @@ nav {
 }
 /* End of Title */
 .button1 {
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top:50px ;
     border-radius: 4%;
     border:solid;
@@ -104,12 +106,28 @@ nav {
     font-size: 3rem;
     background-color:transparent;
 }
-.button2 {
-     margin-top:50px ;
-    border-radius: 4%;
-    border:solid;
-    border-color:var(--main-color) ;
-    font-size: 3rem;
-    background-color:transparent;
-
+.search {
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 20px;
 }
+.button1 input {
+    background-color:rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        
+    }
+    .button1 input:focus:focus {
+        background-color:var(--third-color);
+        outline: none;
+    }
+    .button1{
+        background-color: var(--main-color);
+        border: none;
+        
+        color:white ;
+        text-align: center;
+    }
+    .button1:hover {
+        background-color:var(--third-color);
+    
+    }
