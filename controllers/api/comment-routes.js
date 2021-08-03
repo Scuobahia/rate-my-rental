@@ -21,9 +21,11 @@ router.post('/', withAuth, (req, res) => {
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
-            res.status(400).json(err);
+            res.status(500).json(err);
         });
 });
+
+// Create Update
 
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
