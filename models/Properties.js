@@ -4,38 +4,38 @@ const sequelize = require('../config/connection');
 class Properties extends Model { }
 
 Properties.init({
-    id: {
+   id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },
-    title: {
+   },
+   title: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    post_url: {
+   },
+   post_url: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isURL: true
+         isURL: true
       }
-    },
-    user_id: {
+   },
+   user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id'
+         model: 'user',
+         key: 'id'
       }
-    }
-  },
+   }
+},
 
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'properties'
-    }
+   {
+      sequelize,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'properties'
+   }
 );
 
 module.exports = Properties;

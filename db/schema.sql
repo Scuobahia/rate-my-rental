@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS properties;
-CREATE DATABASE properties;
-USE properties;
+DROP DATABASE IF EXISTS rate_my_rental_db;
+CREATE DATABASE rate_my_rental_db;
+USE rate_my_rental_db;
 
-CREATE TABLE home_listings (
+CREATE TABLE properties (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     number_of_bedrooms DECIMAL(10) NOT NULL,
     number_of_bathrooms  DECIMAL(10) NOT NULL,
@@ -15,11 +15,10 @@ CREATE TABLE home_listings (
     zip_code DECIMAL(10) NOT NULL,
     parking_type VARCHAR(30),
     parking_spaces DECIMAL(10),
-    homeowners_associationVARCHAR (30) NOT NULL,
+    homeowners_association VARCHAR(30) NOT NULL,
     hoa_fee DECIMAL(10),
     utilities VARCHAR(30) NOT NULL,
     rent_ammount DECIMAL(10) NOT NULL,
-
 );
 
 CREATE TABLE landlords (
