@@ -17,17 +17,37 @@ Landlord.init(
       primaryKey: true,
       autoIncrement: true
     },
-    username: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    company_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    number_of_properties: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    contact_info: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true
-      }
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,

@@ -15,7 +15,7 @@ CREATE TABLE home_listings (
     zip_code DECIMAL(10) NOT NULL,
     parking_type VARCHAR(30),
     parking_spaces DECIMAL(10),
-    homeowners_associationVARCHAR (30) NOT NULL,
+    homeowners_association VARCHAR (30) NOT NULL,
     hoa_fee DECIMAL(10),
     utilities VARCHAR(30) NOT NULL,
     rent_ammount DECIMAL(10) NOT NULL,
