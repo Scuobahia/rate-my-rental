@@ -15,11 +15,7 @@ CREATE TABLE properties (
     zip_code DECIMAL(10) NOT NULL,
     parking_type VARCHAR(30),
     parking_spaces DECIMAL(10),
-<<<<<<< HEAD
-    homeowners_association VARCHAR (30) NOT NULL,
-=======
     homeowners_association VARCHAR(30) NOT NULL,
->>>>>>> b82b772ce2b7853325c269b1748278f27eb018c4
     hoa_fee DECIMAL(10),
     utilities VARCHAR(30) NOT NULL,
     rent_ammount DECIMAL(10) NOT NULL,
