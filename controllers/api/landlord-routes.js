@@ -4,96 +4,96 @@ const { Post, Tenant, Comment, Rating, Properties, Landlord } = require('../../m
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    Landlord.findAll({
-        attributes: [],
-        include: [
-            {
-                model: Properties,
-            },
-            {
-                model: Tenant,
-                attributes: ['username']
-            }
-        ]
-    })
-        .then(dbLandLordData => res.json(dbLandLordData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+   Landlord.findAll({
+      attributes: [],
+      include: [
+         {
+            model: Properties,
+         },
+         {
+            model: Tenant,
+            attributes: ['username']
+         }
+      ]
+   })
+      .then(dbLandLordData => res.json(dbLandLordData))
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
 });
 
 router.get('/:id', (req, res) => {
-    Landlord.findOne({
-        attributes: [],
-        include: [
-            {
-                model: Properties,
-            },
-            {
-                model: Tenant,
-                attributes: ['username']
-            }
-        ]
-    })
-        .then(dbLandLordData => {
-            if (!dbLandLordData) {
-                res.status(404).json({ message: 'No landlord found with this id' });
-                return;
-            }
-            res.json(dbLandLordData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+   Landlord.findOne({
+      attributes: [],
+      include: [
+         {
+            model: Properties,
+         },
+         {
+            model: Tenant,
+            attributes: ['username']
+         }
+      ]
+   })
+      .then(dbLandLordData => {
+         if (!dbLandLordData) {
+            res.status(404).json({ message: 'No landlord found with this id' });
+            return;
+         }
+         res.json(dbLandLordData);
+      })
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
 });
 
 router.post('/', withAuth, (req, res) => {
-    Landlord.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    })
-        .then(dbLandLordData => res.json(dbLandLordData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+   Landlord.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+   })
+      .then(dbLandLordData => res.json(dbLandLordData))
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
 })
 
 router.put('/:id', withAuth, (req, res) => {
-    Landlord.update({
-        // update
-    })
-        .then(dbLandLordData => {
-            if (!dbLandLordData) {
-                res.status(404).json({ message: 'No landlord found with this id' });
-                return;
-            }
-            res.json(dbLandLordData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+   Landlord.update({
+      // update
+   })
+      .then(dbLandLordData => {
+         if (!dbLandLordData) {
+            res.status(404).json({ message: 'No landlord found with this id' });
+            return;
+         }
+         res.json(dbLandLordData);
+      })
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
 })
 
 router.delete('/:id', withAuth, (req, req) => {
-    Landlord.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbLandLordData => {
-            if (!dbLandLordData) {
-                res.status(404).json({ message: 'No Landlord found with this id' });
-                return;
-            }
-            res.json(dbLandLordData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+   Landlord.destroy({
+      where: {
+         id: req.params.id
+      }
+   })
+      .then(dbLandLordData => {
+         if (!dbLandLordData) {
+            res.status(404).json({ message: 'No Landlord found with this id' });
+            return;
+         }
+         res.json(dbLandLordData);
+      })
+      .catch(err => {
+         console.log(err);
+         res.status(500).json(err);
+      });
 });
