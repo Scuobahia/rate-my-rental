@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tenant, Comment, Post, Rating } = require('../../models');
+const { Tenant, Comment, Post, Rating, Landlord } = require('../../models');
 
 router.get('/', (req, res) => {
     Tenant.findAll({
@@ -18,13 +18,26 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         },
         attributes: { exclude: ['password'] },
-        include: []
+        include: [
+            {
+                model: Post
+            },
+            {
+                model: Landlord
+            }
+        ]
     })
-        .then(dbTenantData => res.json(dbTenantData))
+        .then(dbTenantData => {
+            if (!dbTenantData) {
+                res.status(404).json({ message: 'No tenant found with this id' });
+                return;
+            }
+            res.json(dbTenantData);
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
-        })
+        });
 });
 
 // Tenant Create
@@ -99,7 +112,7 @@ router.put('/:id', (req, res) => {
     })
         .then(dbTenantData => {
             if (!dbTenantData) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No tenant found with this id' });
                 return;
             }
             res.json(dbTenantData);
@@ -118,7 +131,7 @@ router.delete('/:id', (req, res) => {
     })
         .then(dbTenantData => {
             if (!dbTenantData) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No tenant found with this id' });
                 return;
             }
             res.json(dbTenantData);

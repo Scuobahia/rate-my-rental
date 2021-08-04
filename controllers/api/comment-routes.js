@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../../model');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -21,9 +21,11 @@ router.post('/', withAuth, (req, res) => {
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
-            res.status(400).json(err);
+            res.status(500).json(err);
         });
 });
+
+// Create Update
 
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
