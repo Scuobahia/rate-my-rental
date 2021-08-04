@@ -85,7 +85,7 @@ const propertiesData = [
         zip_code:84003,
         parking_type:"Parking Garage",
         parking_spaces:1,
-        homeowners_association:"Yes"
+        homeowners_association:"Yes",
         hoa_fee:200,
         utilities:"Water, Elecrtic",
         rent_amount:1850
