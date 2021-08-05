@@ -20,6 +20,8 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
    <link rel="stylesheet" href="./assets/css/styles.css">
    <link rel="stylesheet" href="./assets/css/menu.css">
+   <link rel="stylesheet" href="./assets/css/star-rating.css">
+   <link rel="stylesheet" href="./assets/css/modals.css">
 </head>
 
 <body>
@@ -40,20 +42,36 @@
    <div class="slider"></div>
    <!-- End of Intro Loading Screen -->
    <main>
+       <!-- Buttons and Modal -->
       <section class="landing">
          <nav>
             <section>
                <div class="container-fluid search">
                   <div class="row">
                      <div class="col">
-                        <button class="button1 propBtn">Search Properties</button>
+                        <button class="button1 propBtn" id="open2">Search Properties</button>
+                        <div class="modal-container2" id="modal-container2">
+                            <div class="modal2">
+                              
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptates esse iusto molestiae unde ipsa earum quae et qui, asperiores nesciunt veniam adipisci debitis doloremque odit minus totam repudiandae recusandae!</p>
+                              <button class="modal-button2" id="close2">Go back</button>
+                            </div>
+                          </div>
                      </div>
                      <div class="col">
-                        <button class="button1 landlordBtn">Search Landlords</button>
+                        <button class="button1 propBtn" id="open2">Search Landlord</button>
+                        <div class="modal-container2" id="modal-container2">
+                            <div class="modal2">
+                              
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptates esse iusto molestiae unde ipsa earum quae et qui, asperiores nesciunt veniam adipisci debitis doloremque odit minus totam repudiandae recusandae!</p>
+                              <button class="modal-button2" id="close2">Go back</button>
+                            </div>
+                          </div>
                      </div>
                   </div>
                </div>
             </section>
+            
             <!-- Hamburger Menu -->
             <div class="menu-wrap">
                <input type="checkbox" class="toggler">
