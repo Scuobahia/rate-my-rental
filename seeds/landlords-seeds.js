@@ -1,6 +1,6 @@
-const {landlords} = require("../models");
+const { Landlord } = require("../models");
 
-const propertiesData = [
+const landlordData = [
     {
         first_name:"Bob",
         last_name:"Belcher",
@@ -300,6 +300,7 @@ const propertiesData = [
         password:"nedFlenders"
     },
 
+];
+const seedLandlord = () => Landlord.bulkCreate(landlordData, {individualHooks: true});
 
-
-]
+module.exports = seedLandlord;

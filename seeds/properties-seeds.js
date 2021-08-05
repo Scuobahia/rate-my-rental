@@ -612,5 +612,9 @@ const propertiesData = [
         utilities:"Water, Gas, Electric",
         rent_amount:1300
 
-    },
-]
+    }
+];
+
+const seedProperties = () => Properties.bulkCreate(propertiesData);
+
+module.exports = seedProperties;
