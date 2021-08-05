@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
     Post.create({ // might need updating
         title: req.body.title,
         post_url: req.body.post_url,
-        user_id: req.body.user_id
+        tenant_id: req.body.tenant_id
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {

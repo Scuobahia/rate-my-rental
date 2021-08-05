@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
     })
         .then(dbTenantData => {
             req.session.save(() => {
-                req.session.user_id = dbTenantData.id;
+                req.session.tenant_id = dbTenantData.id;
                 req.session.username = dbTenantData.username;
                 req.session.loggedIn = true;
 
@@ -82,11 +82,11 @@ router.post('/login', (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = dbTenantData.id;
+            req.session.tenant_id = dbTenantData.id;
             req.session.username = dbTenantData.username;
             req.session.loggedIn = true;
 
-            res.json({ user: dbTenantData, message: 'You are now logged in!' });
+            res.json({ tenant: dbTenantData, message: 'You are now logged in!' });
         });
     });
 });

@@ -63,8 +63,11 @@ router.post('/', withAuth, (req, res) => {
 })
 
 router.put('/:id', withAuth, (req, res) => {
-   Landlord.update({
-      // update
+   Landlord.update(req.body, {
+        individualHooks: true,
+        where: {
+          id: req.params.id
+        }
    })
       .then(dbLandLordData => {
          if (!dbLandLordData) {
@@ -79,7 +82,7 @@ router.put('/:id', withAuth, (req, res) => {
       });
 })
 
-router.delete('/:id', withAuth, (req, req) => {
+router.delete('/:id', withAuth, (req, res) => {
    Landlord.destroy({
       where: {
          id: req.params.id
@@ -97,3 +100,5 @@ router.delete('/:id', withAuth, (req, req) => {
          res.status(500).json(err);
       });
 });
+
+module.exports = router;
