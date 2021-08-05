@@ -10,6 +10,6 @@ router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
 router.use('/properties', propPage);
-router.use('/landlords', landlordPage)
+router.use('/landlords', landlordPage);
 
 module.exports = router;

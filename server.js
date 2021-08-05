@@ -1,6 +1,4 @@
-const fs = require('fs');
 const path = require('path');
-const inquirer = require('inquirer');
 const express = require('express');
 const helpers = require('./utils/helper');
 const session = require('express-session');

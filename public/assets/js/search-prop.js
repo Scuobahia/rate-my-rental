@@ -4,7 +4,7 @@ async function newPropSearch(event) {
    const response = await fetch(`/api/properties`, {
       method: 'GET',
       body: JSON.stringify({
-         title,
+         // title,
          
       }),
       headers: {
