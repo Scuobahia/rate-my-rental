@@ -42,16 +42,16 @@ router.get('/:id', (req, res) => {
 
 // Tenant Create
 router.post('/', (req, res) => {
-   Tenant.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password
-   })
-      .then(dbTenantData => {
-         req.session.save(() => {
-            req.session.user_id = dbTenantData.id;
-            req.session.username = dbTenantData.username;
-            req.session.loggedIn = true;
+    Tenant.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+        .then(dbTenantData => {
+            req.session.save(() => {
+                req.session.tenant_id = dbTenantData.id;
+                req.session.username = dbTenantData.username;
+                req.session.loggedIn = true;
 
             res.json(dbTenantData);
          });
@@ -81,14 +81,14 @@ router.post('/login', (req, res) => {
          return;
       }
 
-      req.session.save(() => {
-         req.session.user_id = dbTenantData.id;
-         req.session.username = dbTenantData.username;
-         req.session.loggedIn = true;
+        req.session.save(() => {
+            req.session.tenant_id = dbTenantData.id;
+            req.session.username = dbTenantData.username;
+            req.session.loggedIn = true;
 
-         res.json({ user: dbTenantData, message: 'You are now logged in!' });
-      });
-   });
+            res.json({ tenant: dbTenantData, message: 'You are now logged in!' });
+        });
+    });
 });
 
 // Logout

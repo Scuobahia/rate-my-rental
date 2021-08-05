@@ -16,7 +16,7 @@ Tenant.init(
       primaryKey: true,
       autoIncrement: true
     },
-    Tenantname: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false
     },
