@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
          },
          {
             model: Tenant,
-            attributes: ['username']
+            // attributes: ['username']
          }
       ]
    })

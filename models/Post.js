@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
-      user_id: body.user_id,
+      tenant_id: body.tenant_id,
       post_id: body.post_id
     }).then(() => {
       return Post.findOne({
@@ -24,9 +24,9 @@ class Post extends Model {
         include: [
           {
             model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment_text', 'post_id', 'tenant_id', 'created_at'],
             include: {
-              model: models.User,
+              model: models.Tenant,
               attributes: ['username']
             }
           }
@@ -56,10 +56,10 @@ Post.init(
         isURL: true
       }
     },
-    user_id: {
+    tenant_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'tenant',
         key: 'id'
       }
     }

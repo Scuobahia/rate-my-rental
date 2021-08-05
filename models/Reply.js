@@ -18,7 +18,7 @@ Reply.init(
         len: [1]
       }
     },
-    user_id: {
+    landlord_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'landlord',

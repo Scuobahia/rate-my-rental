@@ -11,11 +11,11 @@ Rating.init(
       allowNull: false,
       autoIncrement: true
     },
-    user_id: {
+    tenant_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
+        model: 'tenant',
         key: 'id'
       }
     },

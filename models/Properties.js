@@ -21,10 +21,10 @@ Properties.init({
          isURL: true
       }
    },
-   user_id: {
+   tenant_id: {
       type: DataTypes.INTEGER,
       references: {
-         model: 'user',
+         model: 'tenant',
          key: 'id'
       }
    }
