@@ -1,4 +1,4 @@
-// Modal 
+
 // var open2 = document.getElementById('open2');
 // var modal_container2 = document.getElementById('modal-container2');
 // var close2 = document.getElementById('close2');
