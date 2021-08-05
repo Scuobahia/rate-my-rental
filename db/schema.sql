@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS rate_my_rental_db;
 CREATE DATABASE rate_my_rental_db;
-USE rate_my_rental_db;
+-- USE rate_my_rental_db;
 
 -- CREATE TABLE properties (
 --     id INTEGER PRIMARY KEY AUTO_INCREMENT,
