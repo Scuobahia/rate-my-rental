@@ -5,19 +5,8 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
    Properties.findAll({
-      attributes: [],
-      include: [
-         {
-            model: Tenant,
-            attributes: ['username']
-         },
-         {
-            model: Rating,
-         },
-         {
-            model: Comment,
-         }
-      ]
+      attributes: {},
+      
    })
       .then(dbPropertyData => res.json(dbPropertyData))
       .catch(err => {
