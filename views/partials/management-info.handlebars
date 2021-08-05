@@ -1,7 +1,38 @@
 <section class="landlord">
    <div class="landlord-info">
       <span class="landlord-name">{{landlord_name}}</span>
-      <span> class="landlord-rating"{{landlord_rating}} {{posts.length}}</span>
+      <div class="landlord-rating rating large star-icon direction-ltr value-4 label-top">
+        <div class="label-value">12 Reviews</div>
+        <div class="star-container">
+            <div class="star">
+                <i class="star-empty"></i>
+                <i class="star-half"></i>
+                <i class="star-filled"></i>
+            </div>
+            <div class="star">
+                <i class="star-empty"></i>
+                <i class="star-half"></i>
+                <i class="star-filled"></i>
+            </div>
+            <div class="star">
+                <i class="star-empty"></i>
+                <i class="star-half"></i>
+                <i class="star-filled"></i>
+            </div>
+            <div class="star">
+                <i class="star-empty"></i>
+                <i class="star-half"></i>
+                <i class="star-filled"></i>
+            </div>
+            <div class="star">
+                <i class="star-empty"></i>
+                <i class="star-half"></i>
+                <i class="star-filled"></i>
+            </div>
+        </div>
+    </div>
+    </span>
+         <span>{{posts.length}}</span>
       <span>Contact: {{landlord_number}}</span>
       <span>Located at: {{landlord_address}}</span>
       <span>Office Hours: {{landlord_hours}}</span>
