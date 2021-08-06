@@ -14,7 +14,12 @@ Rate My Rental is a web application that allows tenants to rate their landlords 
 Clone down the repository found at https://github.com/Scuobahia/rate-my-rental. The site uses individual environmental variables for username and password, so locate the .env file and update appropriate fields accordingly. This file is included in the .gitignore file to keep it from pushing to your repo. Necessary packages can be installed using npm install. The current version has a database that can be seeded for testing/use. In your terminal, navigate to the root directory and open mysql in your terminal and type 'USE rate_my_rental_db'. Next, use command 'source db/schema.sql' and finally, seed the tables using 'source db/seeds.sql'. You'll now have data to work with. Quit mysql and from your terminal, run 'npm start'. The final piece of feedback after running the command should read 'Now running on PORT 3001'. You'll be able to view information in your browser by adding localhost:3001 to the address bar or using insomnia core. Associated routes can be manually entered in the url for now to view content.
 
 ## Technologies
-
+[npm](https://www.npmjs.com/)
+[mysql](https://www.mysql.com/)
+[insomnia core](https://insomnia.rest/)
+[css-star-rating-npm](https://www.npmjs.com/package/css-star-rating)
+[bcrypt](https://www.npmjs.com/package/bcrypt)
+[handlebars.js](https://handlebarsjs.com/)
 
 ## Usage
 Instructions for use as listed previously. Compare with associated screenshots:
