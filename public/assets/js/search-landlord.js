@@ -4,17 +4,17 @@ async function newLandlordSearch(event) {
     const response = await fetch('/api/landlord', {
         method: 'GET',
         body: JSON.stringify({
-            title,
+            title
         }),
         headers: {
             'Content-Type': 'application/json'
         }
     });
     if (response.ok) {
-        document.location.replace('/landlord');
+        document.location.replace('/api/landlord');
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('.landlordBtn').addEventListener('click', newLandlordSearch)
+document.querySelector('button1').addEventListener('click', newLandlordSearch)
