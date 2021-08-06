@@ -5,8 +5,7 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
    Properties.findAll({
-      attributes: {},
-      
+      attributes: {}
    })
       .then(dbPropertyData => res.json(dbPropertyData))
       .catch(err => {
@@ -17,12 +16,6 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
    Properties.findOne({
       attributes: [],
-      include: [
-         {
-            model: Tenant,
-            attributes: ['username']
-         }
-      ]
    })
       .then(dbPropertyData => {
          if (!dbPropertyData) {
