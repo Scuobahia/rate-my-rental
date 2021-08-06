@@ -5,12 +5,16 @@ Rate My Rental is a web application that allows tenants to rate their landlords 
 
 ## Table of Contents
 * [Installation](#installation)
+* [Technologies](#technologies)
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
 
 ## Installation
 Clone down the repository found at https://github.com/Scuobahia/rate-my-rental. The site uses individual environmental variables for username and password, so locate the .env file and update appropriate fields accordingly. This file is included in the .gitignore file to keep it from pushing to your repo. Necessary packages can be installed using npm install. The current version has a database that can be seeded for testing/use. In your terminal, navigate to the root directory and open mysql in your terminal and type 'USE rate_my_rental_db'. Next, use command 'source db/schema.sql' and finally, seed the tables using 'source db/seeds.sql'. You'll now have data to work with. Quit mysql and from your terminal, run 'npm start'. The final piece of feedback after running the command should read 'Now running on PORT 3001'. You'll be able to view information in your browser by adding localhost:3001 to the address bar or using insomnia core. Associated routes can be manually entered in the url for now to view content.
+
+## Technologies
+
 
 ## Usage
 Instructions for use as listed previously. Compare with associated screenshots:
@@ -25,7 +29,7 @@ MIT
 Scuobahia/rate-my-rental
 
 ## Contributor Email Addresses
-Clayton : utah.clayton@gmail.com
+J. Antonio Sanchez: Scuobahia1@gmail.com Brandon Evans: brandon.evans0708@gmail.som Clayton Andersen: utah.clayton@gmail.com Parker Christiansen: parkman.christiansen@gmail.com
 
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
