@@ -8,7 +8,7 @@ const Reply = require('./Reply');
 
 // create associations
 Landlord.hasMany(Properties, {
-   foreignKey: 'properties_id'
+   foreignKey: 'landlord_id'
 });
 
 Properties.belongsTo(Landlord, {

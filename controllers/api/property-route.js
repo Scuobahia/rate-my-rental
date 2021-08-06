@@ -15,7 +15,10 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
    Properties.findOne({
-      attributes: [],
+      where: {
+         id:req.params.id
+      },
+      attributes: {},
    })
       .then(dbPropertyData => {
          if (!dbPropertyData) {
@@ -30,9 +33,13 @@ router.get('/:id', (req, res) => {
       });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
    Properties.create({
-      // update
+      number_of_bedrooms: req.body.number_of_bedrooms,
+      number_of_bathrooms: req.body.number_of_bathrooms,
+      property_type: req.body.property_type,
+      location_address: req.body.location_address,
+      landlord_id: req.body.landlord_id
    })
       .then(dbPropertyData => {
          if (!dbPropertyData) {
@@ -47,9 +54,12 @@ router.post('/', withAuth, (req, res) => {
       });
 });
 
-router.put('/', withAuth, (req, res) => {
-   Properties.update({
-      // update
+router.put('/', (req, res) => {
+   Properties.update(req.body, {
+      individualHooks: true,
+      where: {
+         id: req.params.id
+      }
    })
       .then(dbPropertyData => {
          if (!dbPropertyData) {
