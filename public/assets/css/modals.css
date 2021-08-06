@@ -1,19 +1,4 @@
-/* .modal-button2{
-    display: flex;
-    flex-wrap: wrap;
-    background-color:var(--main-color);
-    justify-content: center;
-    box-sizing:border-box;
-    font-family:"Orbitron";
-    font-size: 2vh;
-    letter-spacing: 10px;
-    color: white;
-    border: 0;
-    border-radius: 5px;
-    padding: 10px 25px;
-    width: 300px;
-    margin-left: 200px;
-}
+
 .modal-container2 {
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
@@ -47,4 +32,4 @@
     font-family: "Orbitron";
     font-size: 2vh;
     font-weight: bold;
-} */
+}

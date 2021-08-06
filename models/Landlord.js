@@ -31,7 +31,7 @@ Landlord.init(
     },
     number_of_properties: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     contact_info: {
       type: DataTypes.STRING,
