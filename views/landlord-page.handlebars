@@ -1,5 +1,5 @@
 <section>
-   <div class="container-top">
+ <div class="container-top">
       <div class="row">
          <div class="col">
          </div>
@@ -9,20 +9,21 @@
       <div class="row">
          <div class="col">
             <form class="search-button">
-               <input class="input1" type="text" placeholder="Property Address" name="search">
+               <input class="input1" type="text" placeholder="Landlord Name" name="search">
                <button class="propSearchBtn" type="submit">Search</button>
-               <button class="addPropBtn" type="submit">Add Property</button>
             </form>
          </div>
       </div>
    </div>
+
    <ol>
-      {{#each properties}}
+      {{#each landlords}}
       <li>
-         {{> prop-info}}
+         {{> landlord-info}}
          {{!-- {{MOST RECENT COMMENT}} --}}
          {{!-- {{> comment}} --}}
       </li>
       {{/each}}
    </ol>
 </section>
+

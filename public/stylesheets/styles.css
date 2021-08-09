@@ -1,0 +1,289 @@
+:root {
+   --main-color: rgb(34, 42, 67);
+   --secondary-color: rgb(249, 250, 136);
+   --third-color: rgb(228, 140, 75);
+   --fourth-color: #01fe87;
+   --menu-speed: 0.75s;
+}
+
+main {
+   font-family: 'Londrina Shadow', cursive;
+}
+
+.landing {
+   min-height: 100vh;
+   background-image: url(https://source.unsplash.com/2d4lAQAlbDA/2000x1300);
+   background-size: cover;
+}
+
+/* Intro Loading Styles */
+
+.intro {
+   background-color: black;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.intro-text {
+   font-size: 10rem;
+   color: var(--secondary-color);
+   font-family: 'Permanent Marker', cursive;
+}
+
+.intro-detail {
+   color: var(--third-color);
+}
+
+.slider {
+   background-color: var(--third-color);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: translateX(100%);
+}
+
+.hide {
+   background: black;
+   overflow: hidden;
+}
+
+.hide span {
+   transform: translateY(100%);
+   display: inline-block;
+}
+
+/* End of Intro Loading Screen */
+
+/* Hamburger Styles */
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-links {
+   display: flex;
+   list-style: none;
+   color: var(--main-color);
+}
+
+.nav-links li {
+   padding-left: 10rem;
+   font-size: 1.2rem;
+}
+
+.resume {
+   border: solid;
+}
+
+/* End of Hamburger Styles */
+
+/* Ttile */
+
+.big-text {
+   position: absolute;
+   height: 50px;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -30%);
+   font-size: 8rem;
+   font-family: 'Cabin Sketch', cursive;
+   color:black;
+}
+
+.big-text2 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -30%);
+   font-size: 3rem;
+   font-family: 'Cabin Sketch', cursive;
+   color: var(--secondary-color);
+}
+
+/* End of Title */
+
+.button1 {
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-top: 50px;
+   border-radius: 4%;
+   border: solid;
+   border-color: var(--main-color);
+   font-size: 3rem;
+   background-color: transparent;
+}
+
+.search {
+   width: 1000px;
+   margin-left: 100px;
+   margin-top: 20px;
+}
+
+.button1 input {
+   background-color: rgba(0, 0, 0, 0);
+   border-radius: 5px;
+}
+
+.button1 input:focus:focus {
+   background-color: var(--third-color);
+   outline: none;
+}
+
+.button1 {
+   background-color: var(--main-color);
+   border: none;
+   color: white;
+   text-align: center;
+}
+
+.button1:hover {
+   background-color: var(--third-color);
+}
+
+/* /* Property and Landlord page styles */
+.container-top {
+   background-color:(var(--main-color));
+}
+.background-property {
+   background-color: var(--main-color);
+   height: 200px;
+ 
+}
+.search-button-prop {
+   justify-content: center;
+   align-items: center;
+
+}
+.input1 {
+   width: 500px;
+   height: 50px;
+   margin-top: 60px;
+   margin-left: 200px;
+   border: solid;
+   border-color: var(--fourth-color);
+   border-radius:10px;
+   outline: none;
+   color:var(--main-color);
+   font-size: 2vh;
+}
+.propSearchBtn {
+   background-color: var(--fourth-color);
+   height:50px;
+   width: 100px;
+   border: solid;
+   border-color: var(--third-color);
+   border-radius: 10px;
+   color: var(--main-color);
+   text-align: center;
+   font-size: 2vh;
+}
+.propSearchBtn input {
+   background-color: rgba(0, 0, 0, 0);
+   border-radius: 5px;
+}
+
+.propSearchBtn input:focus:focus {
+   background-color: var(--third-color);
+   outline: none;
+}
+.propSearchBtn:hover {
+   background-color: var(--secondary-color);
+}
+.addPropBtn {
+   background-color: var(--fourth-color);
+   height:50px;
+   width: 300px;
+   border: solid;
+   border-color: var(--third-color);
+   border-radius: 10px;
+   color: var(--main-color);
+   text-align: center;
+   font-size: 2vh;
+}
+.addPropBtn input {
+   background-color: rgba(0, 0, 0, 0);
+   border-radius: 5px;
+}
+
+.addPropBtn input:focus:focus {
+   background-color: var(--third-color);
+   outline: none;
+}
+.addPropBtn:hover {
+   background-color: var(--secondary-color);
+}
+/* Login and Sign up Forms */
+.loging-box {
+   margin-top: 100px;
+   margin-left: 250px;
+   background-color:var(--main-color);
+   border-radius: 10px;
+   height: 600px;
+   
+}
+.signup-box {
+   margin-top: 100px;
+   margin-left: 50px;
+   margin-right: 250px;
+   border-radius: 10px;
+   background-color:var(--third-color);
+   height: 600px;
+}
+.login-form {
+   margin-top: 50px;
+   align-items: center;
+   font-size: 2vh;
+   text-align: center;
+   
+}
+.login-form input {
+   border-radius: 5px;
+   border: none;
+}
+.login-form label {
+   letter-spacing: 5px;
+   color: white;
+}
+.login-form button{
+   border-radius: 5px;
+   border: none;
+   background-color: var(--secondary-color);
+   color: black;
+   width: 100px;
+}
+
+.signup-form {
+   margin-top: 50px;
+   align-items: center;
+   font-size: 2vh;
+   text-align: center;
+}
+.signup-form input {
+   border-radius: 5px;
+   border: none;
+}
+.signup-form label {
+   letter-spacing: 5px;
+}
+.signup-form button{
+   border-radius: 5px;
+   border: none;
+   background-color: var(--main-color);
+   color: white;
+   width: 100px;
+}
+/* prop-info */
+.property {
+   color: black;
+   font-size: 3vh;
+}
