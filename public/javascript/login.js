@@ -20,7 +20,7 @@ async function signupFormHandler(event) {
          headers: { 'Content-Type': 'application/json' }
       });
       if (response.ok) {
-
+         console.log('Tenant Created and Logged In!');
          document.location.replace('/');
          
       } else {
